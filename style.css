@@ -1,3 +1,60 @@
-body {
-    color: green
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --color-primary: #4A90E2;
+    --color-secondary: #50E3C2;
+    --color-background: #F5F7FA;
+    --color-text: #4A4A4A;
+    --font-family-base: 'Roboto Flex', sans-serif;
+}
+html {
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+nav {
+    position: relative;
+    background-color: var(--color-primary);
+    padding: 10px 16px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.menu-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.close-icon {
+    display: none;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 6px;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 14px 18px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+.dropdown-menu a:hover {
+    background-color: var(--color-background);
+}
+#menu-toggle:checked ~ .dropdown-menu {
+    display: block;
+}
+#menu-toggle:checked ~ .open-icon {
+    display: none;
+}
+#menu-toggle:checked ~ .close-icon {
+    display: flex;
 }
