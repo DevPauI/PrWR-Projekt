@@ -230,6 +230,7 @@ footer {
     background-color: #eee2c7;
     padding: 24px 16px;
     color: black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer .footer-inner {
@@ -252,8 +253,13 @@ footer .footer-column.full-width {
     text-align: center;
 }
 
+
 section {
-    flex: 1;
+    flex: initial;
+}
+
+body > section:first-of-type {
+    flex: 1 1 auto;
 }
 
 footer h3 {
@@ -297,4 +303,30 @@ footer p {
     background-color: #f4eddd;
     border: 1px solid crimson;
     color: crimson;
+}
+
+.unavailable {
+    background-color: #f4eddd;
+    border: 2px solid #ccc;
+    color: #777;
+    width: 150px;
+    height: 40px;
+}
+
+.valid {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #ffffff;
+    color: #1c1e19;
+    border: #1c1e19 2px solid;
+    width: 150px;
+    height: 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 75px;
 }
